@@ -2,3 +2,5 @@
 *.out
 app
 *.txt
+.vscode
+.DS_Store
