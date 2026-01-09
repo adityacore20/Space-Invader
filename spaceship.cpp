@@ -19,14 +19,14 @@ void Spaceship::Draw() {
 }
 
 void Spaceship::MoveLeft() {
-    position.x -= 7;
+    position.x -= 8;
     if(position.x < 25) {
         position.x = 25;
     }
 }
 
 void Spaceship::MoveRight() {
-    position.x += 7;
+    position.x += 8;
     if(position.x > GetScreenWidth() - image.width - 25) {
         position.x = GetScreenWidth() - image.width - 25;
     }
@@ -35,7 +35,7 @@ void Spaceship::MoveRight() {
 void Spaceship::FireLaser()
 {
     if(GetTime() - lastFireTime >= 0.35) {
-        lasers.push_back(Laser({position.x + image.width/2 - 2,position.y},-6));
+        lasers.push_back(Laser({position.x + image.width/2 - 2,position.y},-7));
         lastFireTime = GetTime();
         PlaySound(laserSound);
     }

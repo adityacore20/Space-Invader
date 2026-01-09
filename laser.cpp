@@ -24,7 +24,7 @@ Rectangle Laser::getRect()
 }
 
 void Laser::Update() {
-    position.y += speed;
+    position.y += speed+0.75f;
     if(active) {
         if(position.y > GetScreenHeight() - 100 || position.y < 25) {
             active = false;
